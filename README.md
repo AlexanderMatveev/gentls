@@ -1,7 +1,7 @@
 # Gentls: self-signed TLS
 
 [![Workflow](https://github.com/AlexanderMatveev/gentls/actions/workflows/go.yml/badge.svg)](https://github.com/AlexanderMatveev/gentls/actions)
-[![Go Report Card](https://goreportcard.com/badge/github.com/AlexanderMatveev/gentls)](https://goreportcard.com/report/github.com/AlexanderMatveev/gentls)
+[![Go Report Card](https://goreportcard.com/badge/github.com/AlexanderMatveev/gentls?wtf)](https://goreportcard.com/report/github.com/AlexanderMatveev/gentls)
 
 
 ## Overview
