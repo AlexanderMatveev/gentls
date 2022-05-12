@@ -24,11 +24,12 @@ import (
 
 func main() {
 	server := http.Server{
-		Addr:    fmt.Sprintf(":%d", 3443),
+		Addr: fmt.Sprintf(":%d", 3443),
 	}
 	start := time.Now()
 	log.Print("Generating TLS certs")
-	if server.TLSConfig, err = owntls.Generate(1024, pkix.Name{
+	var err error
+	if server.TLSConfig, err = gentls.New(1024, pkix.Name{
 		Organization: []string{"SelfSigned"},
 		Country:      []string{"RU"},
 		Locality:     []string{"Moscow"},
@@ -38,5 +39,6 @@ func main() {
 	log.Printf("TLS certs generated in %s", time.Since(start))
 	log.Fatal(server.ListenAndServeTLS("", ""))
 }
+
 
 ```
